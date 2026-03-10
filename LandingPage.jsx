@@ -330,9 +330,9 @@ function FadeIn({ children, delay = 0, style }) {
 
 // ─── FAQ Item ─────────────────────────────────────────────────────────────
 const FAQS = [
-  { q: "How long does the onboarding take?", a: "About 5–8 minutes. It's a conversation, not a test. You'll talk with Mentora like you'd talk to a mentor who genuinely wants to understand you." },
-  { q: "Is Mentora free?", a: "We offer a free tier that includes your full scorecard and initial roadmap. Full personalization, weekly check-ins, and ongoing AI guidance are available on our paid plan." },
-  { q: "How does Mentora personalize my roadmap?", a: "We combine your voice conversation, profile data, and real-time job market signals to generate a roadmap unique to you — not a template pulled from a database." },
+  { q: "How long does the onboarding take?", a: "About 5–8 minutes. It's a conversation, not a test. You'll talk with Mentorable like you'd talk to a mentor who genuinely wants to understand you." },
+  { q: "Is Mentorable free?", a: "We offer a free tier that includes your full scorecard and initial roadmap. Full personalization, weekly check-ins, and ongoing AI guidance are available on our paid plan." },
+  { q: "How does Mentorable personalize my roadmap?", a: "We combine your voice conversation, profile data, and real-time job market signals to generate a roadmap unique to you — not a template pulled from a database." },
   { q: "Is my data private?", a: "Yes. We never share your data with anyone. We only store your grade level and general region — never your full name or school name." },
   { q: "Can my school counselor or parents see my results?", a: "Only if you choose to share them. Your roadmap belongs to you, and you control who sees it." },
 ];
@@ -361,7 +361,7 @@ function FAQItem({ q, a }) {
 
 // ─── HOW IT WORKS ─────────────────────────────────────────────────────────
 const HOW_STEPS = [
-  { step: "01", icon: (featured) => <IconMic size={featured ? 44 : 36} color="#1d4ed8" sw={1.5}/>, title: "Talk to Mentora", desc: "Have a 5-minute voice conversation. No forms, no checkboxes. Just a real conversation about you, your goals, and what makes you tick.", featured: true },
+  { step: "01", icon: (featured) => <IconMic size={featured ? 44 : 36} color="#1d4ed8" sw={1.5}/>, title: "Talk to Mentorable", desc: "Have a 5-minute voice conversation. No forms, no checkboxes. Just a real conversation about you, your goals, and what makes you tick.", featured: true },
   { step: "02", icon: () => <IconStar size={36} color="#1d4ed8" sw={1.5}/>, title: "See your scorecard", desc: "Get a personalized profile card showing your strengths, work style, and top career matches. Your \"wow moment.\"", featured: false },
   { step: "03", icon: () => <IconNavigation size={36} color="#1d4ed8" sw={1.5}/>, title: "Get your roadmap", desc: "Receive a step-by-step career roadmap tailored to your goals, backed by real market data, and updated as you grow.", featured: false },
 ];
@@ -420,12 +420,12 @@ function HowItWorksSection() {
 
 // ─── FEATURES — Bento Grid ────────────────────────────────────────────────
 const FEATURES = [
-  { icon: <IconMic size={36} color="#1d4ed8" sw={1.5}/>, title: "Voice-First Onboarding", desc: "Feels like talking to a mentor, not filling out a form. In 5–8 minutes, Mentora builds a complete picture of who you are from a natural conversation.", wide: true },
+  { icon: <IconMic size={36} color="#1d4ed8" sw={1.5}/>, title: "Voice-First Onboarding", desc: "Feels like talking to a mentor, not filling out a form. In 5–8 minutes, Mentorable builds a complete picture of who you are from a natural conversation.", wide: true },
   { icon: <IconBarChart size={36} color="#1d4ed8" sw={1.5}/>, title: "Personalized Scorecard", desc: "Instant visual snapshot of who you are and where you shine." },
   { icon: <IconMap size={36} color="#1d4ed8" sw={1.5}/>, title: "Dynamic Roadmaps", desc: "Step-by-step paths that update as your goals evolve." },
   { icon: <IconTrending size={36} color="#1d4ed8" sw={1.5}/>, title: "Real-Time Market Data", desc: "Roadmaps backed by actual job market trends, not guesswork." },
   { icon: <IconBell size={36} color="#1d4ed8" sw={1.5}/>, title: "Weekly Career Pulse", desc: "Stay on track with weekly check-ins and opportunity alerts." },
-  { icon: <IconMessage size={36} color="#1d4ed8" sw={1.5}/>, title: "AI Chat Guidance", desc: "Ask anything, anytime. Mentora always has your full context — goals, strengths, and roadmap — in every response.", wide: true },
+  { icon: <IconMessage size={36} color="#1d4ed8" sw={1.5}/>, title: "AI Chat Guidance", desc: "Ask anything, anytime. Mentorable always has your full context — goals, strengths, and roadmap — in every response.", wide: true },
 ];
 const BENTO_DIRS = [
   { x: -30, y: 0 }, { x: -30, y: 0 }, { x: 30, y: 0 },
@@ -591,7 +591,7 @@ export default function LandingPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}>
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "1.25rem", color: "#0f172a", letterSpacing: "-0.025em" }}>mentora</span>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "1.25rem", color: "#0f172a", letterSpacing: "-0.025em" }}>mentorable</span>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1d4ed8", display: "inline-block", marginBottom: 2 }}/>
           </button>
           <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
@@ -631,11 +631,17 @@ export default function LandingPage() {
             </motion.div>
 
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 900, letterSpacing: "-0.02em", fontSize: "clamp(3rem, 6vw, 5.5rem)", margin: "1.25rem 0 1.5rem" }}>
-              <span style={{ display: "block", lineHeight: 1.1, color: "#0f172a" }}>
-                <WordAnimate text="Everyone has career advice." delay={0.2}/>
+              <span style={{ display: "block", lineHeight: 1.1 }}>
+                <span style={{ color: "#0f172a" }}>
+                  <WordAnimate text="Every great career starts with" delay={0.2}/>
+                </span>
+                {" "}
+                <span style={{ background: "linear-gradient(135deg, #1d4ed8, #60a5fa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                  <WordAnimate text="one" delay={0.68}/>
+                </span>
               </span>
-              <span style={{ display: "block", lineHeight: 1.1, color: "#2563eb" }}>
-                <WordAnimate text="But nobody has yours." delay={0.68}/>
+              <span style={{ display: "block", lineHeight: 1.1, background: "linear-gradient(135deg, #1d4ed8, #60a5fa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                <WordAnimate text="conversation." delay={0.80}/>
               </span>
             </h1>
 
@@ -643,7 +649,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               style={{ color: "#64748b", fontSize: "1.125rem", lineHeight: 1.78, marginBottom: "2.5rem", maxWidth: 480 }}>
-              Mentora listens to your story, maps your strengths, and builds a career roadmap that's actually yours — not a template.
+              Mentorable listens to your story, maps your strengths, and builds a career roadmap that's actually yours — not a template.
             </motion.p>
 
             <motion.div
@@ -722,7 +728,7 @@ export default function LandingPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "2rem" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: "0.5rem" }}>
-              <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "1.2rem", color: "#f1f5f9", letterSpacing: "-0.025em" }}>mentora</span>
+              <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "1.2rem", color: "#f1f5f9", letterSpacing: "-0.025em" }}>mentorable</span>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#3b82f6", display: "inline-block", marginBottom: 2 }}/>
             </div>
             <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>Career clarity for every student.</p>
@@ -739,7 +745,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div style={{ maxWidth: 1200, margin: "2rem auto 0", paddingTop: "1.5rem", borderTop: "1px solid rgba(148,163,184,0.1)", fontSize: "0.78rem", color: "#475569" }}>
-          <span style={{ color: "rgba(255,255,255,0.5)" }}>© 2025 Mentora. All rights reserved.</span>
+          <span style={{ color: "rgba(255,255,255,0.5)" }}>© 2025 Mentorable. All rights reserved.</span>
         </div>
       </footer>
     </div>
