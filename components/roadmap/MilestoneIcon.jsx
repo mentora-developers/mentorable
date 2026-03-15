@@ -138,7 +138,6 @@ export default function MilestoneIcon({
         position: "relative",
         zIndex: 1,
         flexShrink: 0,
-        fontSize: "53px",
       }}
     >
       <button

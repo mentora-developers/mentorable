@@ -2,8 +2,9 @@
   background-color: transparent;
   outline: none;
   position: relative;
-  width: 4.5em;
-  height: 4.5em;
+  width: 5em;
+  height: 5em;
+  font-size: 14px;
   perspective: 24em;
   transform-style: preserve-3d;
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +30,7 @@
 .icon-btn__back {
   box-shadow: 0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15);
   display: block;
-  transform: rotate(15deg);
+  transform: rotate(8deg);
   transform-origin: 100% 100%;
   will-change: transform;
 }
@@ -51,7 +52,7 @@
   justify-content: center;
 }
 .icon-btn__label {
-  font-size: 1em;
+  font-size: 11px;
   white-space: nowrap;
   text-align: center;
   line-height: 2;
@@ -61,10 +62,14 @@
   right: 0;
   left: 0;
   transform: translateY(0);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  margin: 0 auto;
 }
 .icon-btn:focus-visible .icon-btn__back,
 .icon-btn:hover .icon-btn__back {
-  transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+  transform: rotate(12deg);
 }
 .icon-btn:focus-visible .icon-btn__front,
 .icon-btn:hover .icon-btn__front {
