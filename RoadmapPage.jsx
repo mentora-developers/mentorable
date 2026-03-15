@@ -414,7 +414,6 @@ export default function RoadmapPage() {
 
         if (!profile) { window.location.href = "/onboarding"; return; }
         if (!profile.onboarding_completed) { window.location.href = "/onboarding"; return; }
-        if (!profile.grade_level) { window.location.href = "/profile-setup"; return; }
 
         // Load existing active roadmap (use limit+order to avoid 406 on multiple rows)
         const { data: roadmapRows } = await supabase
